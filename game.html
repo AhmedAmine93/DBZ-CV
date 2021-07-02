@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+    <table width=100%>
+        <tr>
+            <td width=40%>
+                <canvas width=1080px height="700px" id="main"></canvas>
+
+            </td>
+            <td width=40%>
+                <button id="but1">PLAY THE GAME</button>
+                <BUtton id="but2" onclick="info();">INFO KEYS</BUtton>
+                <div id="keys">
+                    left/right/up : move
+                    <br>
+                    a :punch attack
+                    <br>
+                    z : kick attack
+                    <br>
+                    e : energy attack
+                </div>
+
+                <p id="p1">
+                        test
+                </p>
+                <p id="p2">
+
+                </p>
+                <p id="p3">
+                    
+                </p>
+                <a id="download" href="cv.pdf">Download</a>
+                <!-- <table id="tab">
+                    <br>
+                    <tr>
+                        <th>GOKU PH</th>
+                        <th>VEGETA PH</th>
+                    </tr>
+                    <tr>
+                        <td>NEXT TRANSFORMATION IN ..MIN</td>
+                        <td>NEXT TRANSFORMATION IN ..MIN</td>
+                    </tr>
+                    <tr>
+                        <td>..%</td>
+                        <td>..%</td>
+                    </tr>
+                </table> -->
+                <div class="cv"></div>
+            </td>
+        </tr>
+    </table>
+
+</body>
+<script src="resources.js"></script>
+<script>
+    var tab3 = 0;
+     function info(){
+         if(tab3 <1){
+       var nouveauDiv = document.getElementById("keys") ;
+       var tab = document.createElement("table");
+  tab.innerHTML = " <tr> <td>NEXT TRANSFORMATION IN ..MIN</td> <td>NEXT TRANSFORMATION IN ..MIN</td> </tr>";
+ nouveauDiv.appendChild(tab);
+ tab3++;}
+    
+    }
+    var punch_interval= null;
+    var kick_interval = null;
+   var energyInterval=null;
+    
+    var car_x = 50;
+    var car_y = 450;
+    var car_width = 75
+    var car_height = 130
+    var car_source_x = 0
+    var car_source_y = 100
+    var car_source_height = 55
+    var car_source_width = 40
+    var car_hp = 100
+ 
+    var charactere_principal = new Image();
+    var character_adversaire = new Image();
+    var bird = new Image()
+    var cloud = new Image()
+
+    var adv_x =800
+    var adv_y = 450
+    var adv_source_x = 870
+    var adv_source_y = 140
+    var adv_source_width = 40
+    var adv_source_height = 65
+    var adv_hp = 100
+
+    var bird_x = 0
+    var bird_y =150
+    var bird_source_x = 0
+    var bird_source_y = 0
+    var bird_source_width = 180
+    var bird_source_height = 200
+
+    var cloud_x = 1000
+    var cloud_y =50
+    var cloud_source_x = 0
+    var cloud_source_y = 0
+    var cloud_source_width = 600
+    var cloud_source_height = 400
+
+    window.onload = traitement()
+
+    
+</script>
+
+</html>

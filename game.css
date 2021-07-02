@@ -1,0 +1,30 @@
+#main{
+    background-image: url("bg1.jpg") ;
+    
+    background-size: cover;
+    background-position: top;
+}
+#tab,th,td{
+    border: 1px solid black;
+}
+#tab{
+    width: 100%;
+}
+#but1{
+    top: 20px;
+    position: absolute;
+    left: 1130px;
+    background-color: aqua;
+
+
+}
+#but2{
+    top: 20px;
+    position: absolute;
+    left: 1280px;
+    background-color: aqua;
+
+}
+#p1, #p2, #p3, #download{
+    display: none;
+}
