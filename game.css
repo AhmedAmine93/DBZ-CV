@@ -1,6 +1,6 @@
 #main{
     background-image: url("bg1.jpg") ;
-    
+    background-repeat: repeat-x;
     background-size: cover;
     background-position: top;
 }
@@ -25,6 +25,15 @@
     background-color: aqua;
 
 }
-#p1, #p2, #p3, #download{
+#p1, #p2, #p3, #p4, #p5, #download{
     display: none;
+    width: 400px;
+    height: 100px;
+    background: #000;
+    color: #fff;
+    text-align: center;
 }
+body{
+    background-color: orange;
+}
+

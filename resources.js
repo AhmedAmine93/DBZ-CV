@@ -233,7 +233,7 @@ function traitement() {
                 adv_source_y =360
                 ctn.drawImage(character_adversaire, adv_source_x, adv_source_y, adv_source_width+20, adv_source_height, adv_x, adv_y, car_width, car_height);
                 clearInterval(advHand)
-                advAattackAudio.stop()
+                advAattackAudio.pause()
             }else if(adv_source_x>230 ){
                 ctn.clearRect(adv_x, adv_y,car_width ,car_height);
                                   
@@ -275,8 +275,8 @@ function traitement() {
             // adv_source_y = 140
             // ctn.drawImage(character_adversaire, adv_source_x, adv_source_y, adv_source_width, adv_source_height, adv_x, adv_y, car_width, car_height);
             clearInterval(defeatInterval)
-            ctn.font = "50px Arial";
-            ctn.strokeText("YOU WIN",150, 500); 
+            ctn.font = "100px Arial";
+            ctn.strokeText("YOU WIN",300, 500); 
             window.removeEventListener("keydown",animate,false)
 
         }
@@ -317,15 +317,22 @@ function traitement() {
         var d = document.getElementById('download')
         d.style="display:block"
         advDefeat()
-    }else if(adv_hp<30){
+    }else if(adv_hp==20){
         
         var p = document.getElementById('p3')
         p.style = "display:block"
-    }else if(adv_hp<60){
+      
+    }else if(adv_hp==40){
         var p = document.getElementById('p2')
         p.style = "display:block"
-    }else if(adv_hp<90){
+    }else if(adv_hp==60){
         var p = document.getElementById('p1')
+        p.style = "display:block"
+    }else if(adv_hp==70){
+        var p = document.getElementById('p4')
+        p.style = "display:block"
+    }else if(adv_hp==90){
+        var p = document.getElementById('p5')
         p.style = "display:block"
     }
     if(car_hp==0){

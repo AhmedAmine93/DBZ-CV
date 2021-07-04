@@ -8,48 +8,36 @@
 <body>
     <table width=100%>
         <tr>
-            <td width=40%>
+            <td width=50%>
                 <canvas width=1080px height="700px" id="main"></canvas>
 
             </td>
-            <td width=40%>
-                <button id="but1">PLAY THE GAME</button>
-                <BUtton id="but2" onclick="info();">INFO KEYS</BUtton>
+            <td width=50%>
+             
                 <div id="keys">
-                    left/right/up : move
-                    <br>
-                    a :punch attack
-                    <br>
-                    z : kick attack
-                    <br>
-                    e : energy attack
+                  
+                    <BUtton id="but2" onclick="info();" class="btn">INFO KEYS</BUtton>
+                </div>
                 </div>
 
                 <p id="p1">
-                        test
+                    <img src="javascript-logo.png" alt="JAVASCRIPT" style="width: 80px; height: 80px;">  
                 </p>
                 <p id="p2">
-
+                    Vous etes présque black Goku semble résister à vos coups fatale
                 </p>
                 <p id="p3">
-                    
+                    voilà une petite partie de mon CV : 
+                    NON pas encore un peu de patience pour télécharger le CV
                 </p>
-                <a id="download" href="cv.pdf">Download</a>
-                <!-- <table id="tab">
-                    <br>
-                    <tr>
-                        <th>GOKU PH</th>
-                        <th>VEGETA PH</th>
-                    </tr>
-                    <tr>
-                        <td>NEXT TRANSFORMATION IN ..MIN</td>
-                        <td>NEXT TRANSFORMATION IN ..MIN</td>
-                    </tr>
-                    <tr>
-                        <td>..%</td>
-                        <td>..%</td>
-                    </tr>
-                </table> -->
+                <p id="p4">
+                    <img src="kisspng-cascading-style-sheets-logo-clip-art-css3-html-5b7617f67bd3d6.3499284915344660385072.jpg" alt="CSS" style="width: 80px; height: 80px;"> 
+                </p>
+                <p id="p5">
+                    <img src="html5-logo-1-512x500.png" alt="HTML" style="width: 80px; height: 80px;">  
+                </p>
+                <a id="download" href="cv.pdf">vous pouvez enfin télécharger mon CV</a>
+               
                 <div class="cv"></div>
             </td>
         </tr>
@@ -63,7 +51,7 @@
          if(tab3 <1){
        var nouveauDiv = document.getElementById("keys") ;
        var tab = document.createElement("table");
-  tab.innerHTML = " <tr> <td>NEXT TRANSFORMATION IN ..MIN</td> <td>NEXT TRANSFORMATION IN ..MIN</td> </tr>";
+  tab.innerHTML = "  <div> left/right/up : move <br> a :punch attack <br> z : kick attack <br> e : energy attack </div>";
  nouveauDiv.appendChild(tab);
  tab3++;}
     
