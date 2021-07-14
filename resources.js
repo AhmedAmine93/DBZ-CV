@@ -65,7 +65,7 @@ function traitement() {
     function moveRight(ctn, char) {
         var rightMove =  setInterval(right_movement_animation,50)
         function right_movement_animation(){
-            if( car_source_x<200){
+            if( car_source_x<200 && car_x<990){
             ctn.clearRect(car_x, car_y,car_width ,car_height );
              car_source_x += 40
              car_x +=5
@@ -81,7 +81,7 @@ function traitement() {
     function moveLeft(ctn, char) {
         var left_move = setInterval(left_movement_animation,50)
         function left_movement_animation(){
-            if( car_source_x<200){
+            if( car_source_x<200 && car_x>0){
            
             ctn.clearRect(car_x, car_y,car_width ,car_height );
              car_source_x += 40
@@ -97,9 +97,9 @@ function traitement() {
     }
     function jump(ctn, char) {
         
-        car_y-=15
+        
         ctn.clearRect(car_x, car_y,car_width ,car_height );
-
+        car_y-=15
         ctn.drawImage(char, car_source_x, car_source_y, car_source_width, car_source_height, car_x, car_y, car_width, car_height);
         setTimeout(function(){
             car_y+=15
@@ -222,6 +222,7 @@ function traitement() {
   
     function animateAdv() {
         adv_source_x = 910
+    
         adv_source_y = 540
         var advAattackAudio = new Audio("adv"+audioType)
         advAattackAudio.play()
@@ -303,14 +304,16 @@ function traitement() {
         }
     }
   function drawHp() {
-      ctn.clearRect(0,0,1100,10)
-      ctn.fillStyle = "green"
-      ctn.fillRect(0,0,car_hp,20)
-      ctn.fillRect(980,0,adv_hp,20)
-      ctn.fillStyle= "red"
-      ctn.fillRect(car_hp,0,100-car_hp,20)
-      ctn.fillRect(980+adv_hp,0,100-adv_hp,20)
-
+    if(adv_hp>=0)
+    {
+        ctn.clearRect(0,0,1100,10)
+        ctn.fillStyle = "green"
+        ctn.fillRect(0,0,car_hp,20)
+        ctn.fillRect(980,0,adv_hp,20)
+        ctn.fillStyle= "red"
+        ctn.fillRect(car_hp,0,100-car_hp,20)
+        ctn.fillRect(980+adv_hp,0,100-adv_hp,20)
+    } 
   }
   function showInfo() {
     if(adv_hp==0){

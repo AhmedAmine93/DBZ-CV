@@ -13,31 +13,32 @@
 
             </td>
             <td width=50%>
-             
+
                 <div id="keys">
-                  
+
                     <BUtton id="but2" onclick="info();" class="btn">INFO KEYS</BUtton>
                 </div>
                 </div>
 
                 <p id="p1">
-                    <img src="javascript-logo.png" alt="JAVASCRIPT" style="width: 80px; height: 80px;">  
+                    <img src="javascript-logo.png" alt="JAVASCRIPT" style="width: 80px; height: 80px;">
                 </p>
                 <p id="p2">
                     Vous etes présque black Goku semble résister à vos coups fatale
                 </p>
                 <p id="p3">
-                    voilà une petite partie de mon CV : 
+                    voilà une petite partie de mon CV :
                     NON pas encore un peu de patience pour télécharger le CV
                 </p>
                 <p id="p4">
-                    <img src="kisspng-cascading-style-sheets-logo-clip-art-css3-html-5b7617f67bd3d6.3499284915344660385072.jpg" alt="CSS" style="width: 80px; height: 80px;"> 
+                    <img src="kisspng-cascading-style-sheets-logo-clip-art-css3-html-5b7617f67bd3d6.3499284915344660385072.jpg"
+                        alt="CSS" style="width: 80px; height: 80px;">
                 </p>
                 <p id="p5">
-                    <img src="html5-logo-1-512x500.png" alt="HTML" style="width: 80px; height: 80px;">  
+                    <img src="html5-logo-1-512x500.png" alt="HTML" style="width: 80px; height: 80px;">
                 </p>
                 <a id="download" href="cv.pdf">vous pouvez enfin télécharger mon CV</a>
-               
+
                 <div class="cv"></div>
             </td>
         </tr>
@@ -47,19 +48,20 @@
 <script src="resources.js"></script>
 <script>
     var tab3 = 0;
-     function info(){
-         if(tab3 <1){
-       var nouveauDiv = document.getElementById("keys") ;
-       var tab = document.createElement("table");
-  tab.innerHTML = "  <div> left/right/up : move <br> a :punch attack <br> z : kick attack <br> e : energy attack </div>";
- nouveauDiv.appendChild(tab);
- tab3++;}
-    
+    function info() {
+        if (tab3 < 1) {
+            var nouveauDiv = document.getElementById("keys");
+            var tab = document.createElement("table");
+            tab.innerHTML = "  <div> left/right/up : move <br> a :punch attack <br> z : kick attack <br> e : energy attack </div>";
+            nouveauDiv.appendChild(tab);
+            tab3++;
+        }
+
     }
-    var punch_interval= null;
+    var punch_interval = null;
     var kick_interval = null;
-   var energyInterval=null;
-    
+    var energyInterval = null;
+
     var car_x = 50;
     var car_y = 450;
     var car_width = 75
@@ -69,13 +71,13 @@
     var car_source_height = 55
     var car_source_width = 40
     var car_hp = 100
- 
+
     var charactere_principal = new Image();
     var character_adversaire = new Image();
     var bird = new Image()
     var cloud = new Image()
 
-    var adv_x =800
+    var adv_x = 800
     var adv_y = 450
     var adv_source_x = 870
     var adv_source_y = 140
@@ -84,14 +86,14 @@
     var adv_hp = 100
 
     var bird_x = 0
-    var bird_y =150
+    var bird_y = 150
     var bird_source_x = 0
     var bird_source_y = 0
     var bird_source_width = 180
     var bird_source_height = 200
 
     var cloud_x = 1000
-    var cloud_y =50
+    var cloud_y = 50
     var cloud_source_x = 0
     var cloud_source_y = 0
     var cloud_source_width = 600
@@ -99,7 +101,7 @@
 
     window.onload = traitement()
 
-    
+
 </script>
 
 </html>
